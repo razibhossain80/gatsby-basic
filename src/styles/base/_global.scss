@@ -1,0 +1,42 @@
+// Theme Name:
+// Theme URI:
+// Author:
+// Author URI: https://
+// Version: 1.0
+
+//Global Style
+html{
+	scroll-behavior: smooth;
+}
+body{
+	font-family: $body-font;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: $header-font;
+}
+p{
+	font-size: 16px;
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+img{
+	max-width: 100%;
+}
+ul{
+   list-style: none;
+   padding-left: 0;
+}
+span{
+	display: inline-block;
+}
+:focus{
+	box-shadow: none;
+}
+:disabled {
+       cursor: not-allowed;
+}
+

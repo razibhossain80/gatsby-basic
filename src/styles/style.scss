@@ -1,0 +1,24 @@
+
+//global 
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/global';
+@import 'base/utilities';
+@import 'base/generic';
+
+//vendors
+@import 'vendors/bootstrap.scss';
+
+//layout
+@import 'layout/header';
+@import 'layout/sidebar';
+@import 'layout/footer';
+
+//components
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/tables';
+
+//pages
+@import 'pages/home'
+
