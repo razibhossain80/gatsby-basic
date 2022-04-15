@@ -5,8 +5,25 @@
  */
 
 module.exports = {
-  /* Your site config here */
-  plugins: [`gatsby-plugin-sass`],
+
+  plugins: [
+    "gatsby-plugin-sass",
+    "gatsby-transformer-remark",
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data/`,
+      },
+    },
+    {
+      resolve: "gatsby-source-custom-api",
+      options: {
+          url: "https://jsonplaceholder.typicode.com/posts"
+      }
+  },
+  ],
+
   siteMetadata:{
     title:"basic",
     description:"basic"
