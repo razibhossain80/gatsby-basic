@@ -15,7 +15,6 @@ export default function Navbar() {
 
   return (
     <nav className='links'>
-      {title}
       <ul>
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
