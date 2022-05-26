@@ -1,14 +1,18 @@
 import React from 'react'
-import Navbar from './Navbar'
+import { Helmet } from "react-helmet"
+import Header from './Header'
+import Footer from './Footer'
 import '../styles/style.scss'
 
 export default function Layout({children}) {
   return (
     <main className='layout'>
-        <Navbar/>
+        <Helmet>
+          <title>Website Title</title>
+        </Helmet>
+        <Header/>
             {children}
-        <footer>This is footer</footer>
-
+        <Footer/>
     </main>
   )
 }
