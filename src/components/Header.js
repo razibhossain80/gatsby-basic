@@ -1,25 +1,23 @@
-import React from 'react'
-import {Link, useStaticQuery, graphql } from "gatsby"
+import React,{useContext} from 'react'
+import Context from './Context'
+import {Link} from "gatsby"
 
 const Header = () => {
-    
-    const data = useStaticQuery(graphql`
-    query SiteInfo {
-      site {
-        siteMetadata {
-          title
-        }
-      }
+
+  const [context, setContext] = useContext(Context);
+  
+    const onClickHandler = ()=>{
+      setContext("New context value")
+      console.log(`footer ${context}`)
     }
-  `)
-  const {title} = data.site.siteMetadata
+    
 
   return (
     <div className="header">
         <nav className='links'>
             <ul>
                 <Link to="/">Home</Link>
-                <Link to="/about">About</Link>
+                <Link to="/about" onClick={onClickHandler} style={{color:"red"}}>About onClick</Link>
                 <Link to="/projects">Project Portfolio</Link>
             </ul>
         </nav>
